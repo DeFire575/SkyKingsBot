@@ -639,7 +639,7 @@ exports.run = async  (message, client, args, cmd, clientMC, skyblockClient) => {
                     let role = message.guild.roles.find(r => r.name == "Runecrafting [15]")
                     await message.member.addRole(role).catch(console.error)
                   } 
-                  if(profiles[p].members[i].skills.runecrafting.level >= 25) {
+                  if(profiles[p].members[i].skills.runecrafting.level >= 24) {
                     let role = message.guild.roles.find(r => r.name == "Runecrafting [25]")
                     await message.member.addRole(role).catch(console.error)
                   }
@@ -686,7 +686,7 @@ exports.run = async  (message, client, args, cmd, clientMC, skyblockClient) => {
         //message.channel.bulkDelete(1)
         //message.channel.send(`**:no_entry: |** <@${userMention}>, an error occured, please contact my developer so he may fix it`)
       //})
-  })
+  }).catch(e => console.log(e))
   
   
 }
